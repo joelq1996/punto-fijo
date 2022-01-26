@@ -1,0 +1,22 @@
+function y=puntofijo(gx,a,tol,rep)
+%{
+Joel Quintuna
+f: función a evaluar
+gx: valor de f despejado x
+a: valor inicial en el cual evaluar f
+tol: tolerancia máxima en la aproximación
+y: valor aproximado de la raíz
+rep: numero de iteraciones maximas
+%}
+g=gx;
+x0=a;
+cont=1;
+while (1)
+    x1=g(x0);
+    cont=cont+1;
+    if (abs(g(x1))<tol || rep==cont)
+        y=x1;
+        break;
+    end
+    x0=x1;
+end
