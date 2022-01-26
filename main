@@ -1,0 +1,6 @@
+f=@(x) exp(-x);
+a=1;
+tol=0.001;
+rep=20;
+k=puntofijo(f,a,tol,rep);
+fprintf('la raiz es %d\n',k);
